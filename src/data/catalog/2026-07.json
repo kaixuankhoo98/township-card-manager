@@ -1,27 +1,245 @@
 {
   "version": "2026-07",
-  "label": "July 2026 (SAMPLE — replace with the real monthly card list)",
+  "label": "Beach Collection (Watermelon)",
   "categories": [
     {
       "name": "Garden",
       "cards": [
-        { "name": "Shovel", "rarity": "one_star" },
-        { "name": "Watering Can", "rarity": "two_star" },
-        { "name": "Gnome", "rarity": "three_star" },
-        { "name": "Wheelbarrow", "rarity": "four_star" },
-        { "name": "Greenhouse", "rarity": "five_star" },
-        { "name": "Golden Rake", "rarity": "gold" },
-        { "name": "Diamond Fountain", "rarity": "diamond" }
+        { "name": "Flower Arch", "rarity": "one_star" },
+        { "name": "Statue", "rarity": "one_star" },
+        { "name": "Lamp Post", "rarity": "one_star" },
+        { "name": "Bird Feeder", "rarity": "one_star" },
+        { "name": "Topiary", "rarity": "one_star" },
+        { "name": "Fountain", "rarity": "one_star" },
+        { "name": "Chess Table", "rarity": "one_star" },
+        { "name": "Flower Bed", "rarity": "one_star" },
+        { "name": "Pond", "rarity": "one_star" },
+        { "name": "Garden Gate", "rarity": "two_star" }
       ]
     },
     {
-      "name": "Bakery",
+      "name": "Sports",
       "cards": [
-        { "name": "Rolling Pin", "rarity": "one_star" },
-        { "name": "Oven Mitt", "rarity": "two_star" },
-        { "name": "Bread Basket", "rarity": "three_star" },
-        { "name": "Cake Stand", "rarity": "four_star" },
-        { "name": "Master Baker", "rarity": "five_star" }
+        { "name": "Baseball Mitt", "rarity": "one_star" },
+        { "name": "Hoop", "rarity": "one_star" },
+        { "name": "Soccer Ball", "rarity": "one_star" },
+        { "name": "Sneakers", "rarity": "one_star" },
+        { "name": "Tennis", "rarity": "one_star" },
+        { "name": "Golf", "rarity": "one_star" },
+        { "name": "Bottle", "rarity": "one_star" },
+        { "name": "Water Polo", "rarity": "one_star" },
+        { "name": "Champion Cup", "rarity": "two_star" },
+        { "name": "Boxing Gloves", "rarity": "two_star" }
+      ]
+    },
+    {
+      "name": "Finals",
+      "cards": [
+        { "name": "Grad Cap", "rarity": "one_star" },
+        { "name": "Book Stack", "rarity": "one_star" },
+        { "name": "Podium", "rarity": "one_star" },
+        { "name": "Calculator", "rarity": "one_star" },
+        { "name": "Locker", "rarity": "one_star" },
+        { "name": "Computer", "rarity": "one_star" },
+        { "name": "Party Balloons", "rarity": "one_star" },
+        { "name": "Clock", "rarity": "two_star" },
+        { "name": "Honor Medal", "rarity": "two_star" },
+        { "name": "Diploma", "rarity": "three_star" }
+      ]
+    },
+    {
+      "name": "Amusement",
+      "cards": [
+        { "name": "Ferris Wheel", "rarity": "one_star" },
+        { "name": "Bumper Cars", "rarity": "one_star" },
+        { "name": "Bounce", "rarity": "one_star" },
+        { "name": "Target", "rarity": "one_star" },
+        { "name": "Popcorn", "rarity": "one_star" },
+        { "name": "Claw Game", "rarity": "two_star" },
+        { "name": "Carousel", "rarity": "two_star" },
+        { "name": "Ice Cream", "rarity": "two_star" },
+        { "name": "Roller Coaster", "rarity": "three_star" },
+        { "name": "Duck Ride", "rarity": "three_star" }
+      ]
+    },
+    {
+      "name": "Cool",
+      "cards": [
+        { "name": "Fan", "rarity": "one_star" },
+        { "name": "Soda Machine", "rarity": "one_star" },
+        { "name": "Ice Cubes", "rarity": "one_star" },
+        { "name": "Aircon", "rarity": "one_star" },
+        { "name": "Mint Soda", "rarity": "two_star" },
+        { "name": "Fresh Air", "rarity": "two_star" },
+        { "name": "Ice Pop", "rarity": "two_star" },
+        { "name": "Fruit Platter", "rarity": "three_star" },
+        { "name": "Pool", "rarity": "three_star" },
+        { "name": "Hand Fan", "rarity": "four_star" }
+      ]
+    },
+    {
+      "name": "Country",
+      "cards": [
+        { "name": "Swing Chair", "rarity": "one_star" },
+        { "name": "Planter", "rarity": "one_star" },
+        { "name": "Basket", "rarity": "two_star" },
+        { "name": "Mower", "rarity": "two_star" },
+        { "name": "Wreath", "rarity": "two_star" },
+        { "name": "Tea", "rarity": "two_star" },
+        { "name": "Book", "rarity": "three_star" },
+        { "name": "Rocking Chair", "rarity": "three_star" },
+        { "name": "Lantern", "rarity": "four_star" },
+        { "name": "Dock", "rarity": "five_star" }
+      ]
+    },
+    {
+      "name": "Seafaring",
+      "cards": [
+        { "name": "Spyglass", "rarity": "one_star" },
+        { "name": "Buoy", "rarity": "two_star" },
+        { "name": "Map", "rarity": "two_star" },
+        { "name": "Ship", "rarity": "two_star" },
+        { "name": "Anchor", "rarity": "two_star" },
+        { "name": "Helm", "rarity": "three_star" },
+        { "name": "Captain's Cap", "rarity": "three_star" },
+        { "name": "Lighthouse", "rarity": "four_star" },
+        { "name": "Cargo Barrel", "rarity": "five_star" },
+        { "name": "Captain", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Scouts",
+      "cards": [
+        { "name": "Spyglass", "rarity": "one_star" },
+        { "name": "Buoy", "rarity": "two_star" },
+        { "name": "Map", "rarity": "two_star" },
+        { "name": "Ship", "rarity": "two_star" },
+        { "name": "Anchor", "rarity": "two_star" },
+        { "name": "Helm", "rarity": "three_star" },
+        { "name": "Captain's Cap", "rarity": "three_star" },
+        { "name": "Lighthouse", "rarity": "four_star" },
+        { "name": "Cargo Barrel", "rarity": "five_star" },
+        { "name": "Captain", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Vacation",
+      "cards": [
+        { "name": "Suitcase", "rarity": "two_star" },
+        { "name": "Station Clock", "rarity": "two_star" },
+        { "name": "Plane Ticket", "rarity": "two_star" },
+        { "name": "Travel Pillow", "rarity": "three_star" },
+        { "name": "Taxi", "rarity": "three_star" },
+        { "name": "Phone Booth", "rarity": "three_star" },
+        { "name": "Plane", "rarity": "four_star" },
+        { "name": "Travel Book", "rarity": "five_star" },
+        { "name": "Airport Wait", "rarity": "gold" },
+        { "name": "Traveling", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Beach",
+      "cards": [
+        { "name": "Sandcastle", "rarity": "two_star" },
+        { "name": "Beach Umbrella", "rarity": "two_star" },
+        { "name": "Pier", "rarity": "two_star" },
+        { "name": "Cooler", "rarity": "three_star" },
+        { "name": "Palm Tree", "rarity": "three_star" },
+        { "name": "Beach Ball", "rarity": "three_star" },
+        { "name": "Beach Bag", "rarity": "four_star" },
+        { "name": "Lifeguard Post", "rarity": "five_star" },
+        { "name": "Surfing", "rarity": "gold" },
+        { "name": "Swimming", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Music Fest",
+      "cards": [
+        { "name": "Electric Guitar", "rarity": "two_star" },
+        { "name": "Spotlights", "rarity": "two_star" },
+        { "name": "DJ Deck", "rarity": "three_star" },
+        { "name": "Drum Set", "rarity": "three_star" },
+        { "name": "Synth", "rarity": "three_star" },
+        { "name": "Water Bottles", "rarity": "four_star" },
+        { "name": "Autograph", "rarity": "four_star" },
+        { "name": "Wristband", "rarity": "five_star" },
+        { "name": "Groovy Duo", "rarity": "gold" },
+        { "name": "Rockstar", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Diving",
+      "cards": [
+        { "name": "Diving Mask", "rarity": "three_star" },
+        { "name": "Message", "rarity": "three_star" },
+        { "name": "Jellyfish", "rarity": "three_star" },
+        { "name": "Treasure", "rarity": "four_star" },
+        { "name": "Flippers", "rarity": "four_star" },
+        { "name": "Submarine", "rarity": "four_star" },
+        { "name": "Seahorse", "rarity": "five_star" },
+        { "name": "Coral Reef", "rarity": "five_star" },
+        { "name": "Sea Patrol", "rarity": "gold" },
+        { "name": "Diving", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Road Trip",
+      "cards": [
+        { "name": "Backpack", "rarity": "three_star" },
+        { "name": "Fuel Stop", "rarity": "three_star" },
+        { "name": "Camper", "rarity": "four_star" },
+        { "name": "Signpost", "rarity": "four_star" },
+        { "name": "Motel", "rarity": "four_star" },
+        { "name": "Road Map", "rarity": "five_star" },
+        { "name": "Bike Rack", "rarity": "five_star" },
+        { "name": "Picnic", "rarity": "gold" },
+        { "name": "Packing", "rarity": "gold" },
+        { "name": "Hitchhike", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Poolside",
+      "cards": [
+        { "name": "Flip-Flops", "rarity": "three_star" },
+        { "name": "Drink", "rarity": "four_star" },
+        { "name": "Flamingo Float", "rarity": "four_star" },
+        { "name": "Sunscreen", "rarity": "four_star" },
+        { "name": "Waterslide", "rarity": "five_star" },
+        { "name": "Pool Bar", "rarity": "five_star" },
+        { "name": "Towel", "rarity": "five_star" },
+        { "name": "Splash Slide", "rarity": "gold" },
+        { "name": "Sunbathing", "rarity": "gold" },
+        { "name": "Pool Float", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Tour",
+      "cards": [
+        { "name": "Sightseeing Bus", "rarity": "four_star" },
+        { "name": "Camera", "rarity": "four_star" },
+        { "name": "Tower Viewer", "rarity": "four_star" },
+        { "name": "Audio Guide", "rarity": "five_star" },
+        { "name": "Artifact", "rarity": "five_star" },
+        { "name": "Postcards", "rarity": "five_star" },
+        { "name": "Scooter Ride", "rarity": "gold" },
+        { "name": "Shopping", "rarity": "gold" },
+        { "name": "Tour Guide", "rarity": "gold" },
+        { "name": "Selfie", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Summer Fun (Second Round Only)",
+      "cards": [
+        { "name": "Badminton", "rarity": "diamond" },
+        { "name": "Stack", "rarity": "diamond" },
+        { "name": "Jump", "rarity": "diamond" },
+        { "name": "Lemonade", "rarity": "diamond" },
+        { "name": "Games", "rarity": "diamond" },
+        { "name": "Snacks", "rarity": "diamond" },
+        { "name": "Siesta", "rarity": "diamond" },
+        { "name": "Projector", "rarity": "diamond" },
+        { "name": "Stars", "rarity": "diamond" },
+        { "name": "Movie", "rarity": "diamond" }
       ]
     }
   ]

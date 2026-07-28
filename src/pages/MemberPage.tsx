@@ -6,6 +6,7 @@ import { CategorySection } from '../components/CategorySection'
 import { useAuth } from '../context/AuthContext'
 import { isOwnedBy, useOwnershipQuery, useSetOwnership } from '../hooks/useOwnership'
 import { useLogSend } from '../hooks/useSendLog'
+import { currentLap, useLapQuery, useResetCollection } from '../hooks/useCollectionReset'
 
 const SENDABLE_CARD_IDS = new Set(
   ALL_CARDS.filter((card) => !UNSENDABLE_RARITIES.has(card.rarity)).map((card) => card.id),
@@ -17,9 +18,12 @@ export function MemberPage() {
 
   const { auth } = useAuth()
   const { data: ownership, isLoading, isError } = useOwnershipQuery()
+  const { data: laps } = useLapQuery()
   const setOwnership = useSetOwnership()
   const logSend = useLogSend()
+  const resetCollection = useResetCollection()
   const [feedback, setFeedback] = useState<{ message: string; isError: boolean } | null>(null)
+  const [confirmingReset, setConfirmingReset] = useState(false)
 
   if (!auth) return null
 
@@ -35,6 +39,16 @@ export function MemberPage() {
   }
 
   const isSelf = auth.member === memberName
+  const lap = laps ? currentLap(laps, memberName) : undefined
+
+  async function handleReset() {
+    try {
+      await resetCollection.mutateAsync()
+      setConfirmingReset(false)
+    } catch {
+      // resetCollection.isError is rendered below
+    }
+  }
 
   async function handleSend(cardId: string) {
     setFeedback(null)
@@ -49,10 +63,53 @@ export function MemberPage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-semibold">
-        {memberName}
-        {isSelf && <span className="font-normal text-neutral-500"> (You)</span>}
-      </h1>
+      <div className="flex flex-wrap items-center gap-3">
+        <h1 className="text-xl font-semibold">
+          {memberName}
+          {isSelf && <span className="font-normal text-neutral-500"> (You)</span>}
+        </h1>
+        {lap !== undefined && lap > 1 && (
+          <span className="text-xs font-semibold rounded bg-amber-200 text-amber-950 px-2 py-0.5">
+            Lap {lap}
+          </span>
+        )}
+      </div>
+
+      {isSelf && (
+        <div className="text-sm">
+          {!confirmingReset ? (
+            <button
+              type="button"
+              onClick={() => setConfirmingReset(true)}
+              className="underline text-neutral-500"
+            >
+              Reset my collection
+            </button>
+          ) : (
+            <div className="flex flex-wrap items-center gap-2">
+              <span>Clear all your owned cards for this season and start lap {(lap ?? 1) + 1}?</span>
+              <button
+                type="button"
+                disabled={resetCollection.isPending}
+                onClick={handleReset}
+                className="rounded bg-red-600 text-white px-2 py-1 text-xs font-medium disabled:opacity-50"
+              >
+                {resetCollection.isPending ? 'Resetting…' : 'Confirm reset'}
+              </button>
+              <button
+                type="button"
+                onClick={() => setConfirmingReset(false)}
+                className="underline text-neutral-500"
+              >
+                Cancel
+              </button>
+            </div>
+          )}
+          {resetCollection.isError && (
+            <p className="text-sm text-red-600">Couldn't reset — try again.</p>
+          )}
+        </div>
+      )}
 
       {isLoading && <p className="text-sm text-neutral-500">Loading…</p>}
       {isError && <p className="text-sm text-red-600">Couldn't load ownership data.</p>}
