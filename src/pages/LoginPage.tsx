@@ -17,7 +17,7 @@ export function LoginPage() {
     setSubmitting(true)
     try {
       await login(member, passphrase)
-      navigate('/catalog', { replace: true })
+      navigate(`/members/${encodeURIComponent(member)}`, { replace: true })
     } catch {
       setError('Incorrect passphrase — ask a co-op member for it.')
     } finally {

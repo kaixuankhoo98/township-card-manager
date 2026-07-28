@@ -25,10 +25,6 @@ export function useOwnershipQuery() {
   })
 }
 
-export function ownersOf(rows: OwnershipRow[], cardId: string): string[] {
-  return rows.filter((r) => r.card_id === cardId && r.owned).map((r) => r.member_name)
-}
-
 export function isOwnedBy(rows: OwnershipRow[], member: string, cardId: string): boolean {
   return rows.some((r) => r.card_id === cardId && r.member_name === member && r.owned)
 }

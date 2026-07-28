@@ -2,9 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
 const NAV_LINKS = [
-  { to: '/catalog', label: 'Catalog' },
-  { to: '/my-collection', label: 'My Collection' },
-  { to: '/send', label: 'Send Card' },
+  { to: '/members', label: 'Members' },
   { to: '/history', label: 'History' },
 ]
 
@@ -29,7 +27,11 @@ export function Layout() {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-3 text-sm">
-          <span>{auth?.member}</span>
+          {auth && (
+            <NavLink to={`/members/${encodeURIComponent(auth.member)}`} className="underline">
+              {auth.member}
+            </NavLink>
+          )}
           <button type="button" onClick={logout} className="underline">
             Log out
           </button>
