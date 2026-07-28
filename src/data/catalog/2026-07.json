@@ -1,0 +1,28 @@
+{
+  "version": "2026-07",
+  "label": "July 2026 (SAMPLE — replace with the real monthly card list)",
+  "categories": [
+    {
+      "name": "Garden",
+      "cards": [
+        { "name": "Shovel", "rarity": "one_star" },
+        { "name": "Watering Can", "rarity": "two_star" },
+        { "name": "Gnome", "rarity": "three_star" },
+        { "name": "Wheelbarrow", "rarity": "four_star" },
+        { "name": "Greenhouse", "rarity": "five_star" },
+        { "name": "Golden Rake", "rarity": "gold" },
+        { "name": "Diamond Fountain", "rarity": "diamond" }
+      ]
+    },
+    {
+      "name": "Bakery",
+      "cards": [
+        { "name": "Rolling Pin", "rarity": "one_star" },
+        { "name": "Oven Mitt", "rarity": "two_star" },
+        { "name": "Bread Basket", "rarity": "three_star" },
+        { "name": "Cake Stand", "rarity": "four_star" },
+        { "name": "Master Baker", "rarity": "five_star" }
+      ]
+    }
+  ]
+}
