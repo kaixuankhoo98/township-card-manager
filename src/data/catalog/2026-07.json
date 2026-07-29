@@ -110,16 +110,16 @@
     {
       "name": "Scouts",
       "cards": [
-        { "name": "Spyglass", "rarity": "one_star" },
-        { "name": "Buoy", "rarity": "two_star" },
-        { "name": "Map", "rarity": "two_star" },
-        { "name": "Ship", "rarity": "two_star" },
-        { "name": "Anchor", "rarity": "two_star" },
-        { "name": "Helm", "rarity": "three_star" },
-        { "name": "Captain's Cap", "rarity": "three_star" },
-        { "name": "Lighthouse", "rarity": "four_star" },
-        { "name": "Cargo Barrel", "rarity": "five_star" },
-        { "name": "Captain", "rarity": "gold" }
+        { "name": "Campfire", "rarity": "two_star" },
+        { "name": "Whistle", "rarity": "two_star" },
+        { "name": "Sash", "rarity": "two_star" },
+        { "name": "Sleeping Bag", "rarity": "two_star" },
+        { "name": "Bugle", "rarity": "two_star" },
+        { "name": "Tent", "rarity": "three_star" },
+        { "name": "Chair", "rarity": "three_star" },
+        { "name": "Neckerchief", "rarity": "four_star" },
+        { "name": "Binoculars", "rarity": "five_star" },
+        { "name": "Scout", "rarity": "gold" }
       ]
     },
     {
