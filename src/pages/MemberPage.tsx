@@ -12,6 +12,9 @@ const SENDABLE_CARD_IDS = new Set(
   ALL_CARDS.filter((card) => !UNSENDABLE_RARITIES.has(card.rarity)).map((card) => card.id),
 )
 
+// Only worth listing missing cards individually once the pile gets small enough to scan.
+const CARD_VIEW_THRESHOLD = 15
+
 export function MemberPage() {
   const { name = '' } = useParams<{ name: string }>()
   const memberName = decodeURIComponent(name)
@@ -40,6 +43,24 @@ export function MemberPage() {
 
   const isSelf = auth.member === memberName
   const lap = laps ? currentLap(laps, memberName) : undefined
+
+  const missingCards = ownership
+    ? ALL_CARDS.filter(
+        (card) => !UNSENDABLE_RARITIES.has(card.rarity) && !isOwnedBy(ownership, memberName, card.id),
+      )
+    : []
+
+  const missingByCategory =
+    missingCards.length > 0 && missingCards.length < CARD_VIEW_THRESHOLD
+      ? CATALOG.categories
+          .map((category) => ({
+            category,
+            cards: category.cards.filter((card) =>
+              missingCards.some((missing) => missing.id === card.id),
+            ),
+          }))
+          .filter((group) => group.cards.length > 0)
+      : []
 
   async function handleReset() {
     try {
@@ -122,11 +143,29 @@ export function MemberPage() {
         </p>
       )}
 
+      {missingByCategory.length > 0 && (
+        <section className="space-y-2 rounded border border-neutral-300 dark:border-neutral-700 p-3">
+          <h2 className="text-sm font-semibold">Still needed ({missingCards.length})</h2>
+          <div className="space-y-1">
+            {missingByCategory.map(({ category, cards }) => (
+              <p key={category.id} className="text-sm">
+                <span className="font-medium">{category.name}:</span>{' '}
+                <span className="text-neutral-600 dark:text-neutral-400">
+                  {cards.map((card) => card.name).join(', ')}
+                </span>
+              </p>
+            ))}
+          </div>
+        </section>
+      )}
+
       {ownership &&
         CATALOG.categories.map((category) => (
           <CategorySection
             key={category.id}
             category={category}
+            isComplete={category.cards.every((card) => isOwnedBy(ownership, memberName, card.id))}
+            isCardOwned={(cardId) => isOwnedBy(ownership, memberName, cardId)}
             renderFooter={(cardId) => {
               const owned = isOwnedBy(ownership, memberName, cardId)
 
