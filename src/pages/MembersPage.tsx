@@ -10,7 +10,7 @@ export function MembersPage() {
           <li key={name}>
             <Link
               to={`/members/${encodeURIComponent(name)}`}
-              className="block rounded border border-neutral-300 dark:border-neutral-700 p-3 font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              className="block rounded border border-neutral-300 dark:border-neutral-700 p-3 font-medium hover:bg-neutral-100"
             >
               {name}
             </Link>

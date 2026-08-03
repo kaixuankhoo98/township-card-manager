@@ -184,7 +184,7 @@ export function MemberPage() {
               }
 
               if (owned) {
-                return <p className="text-xs font-medium text-green-600">Owned</p>
+                return <p className="text-xs font-medium text-green-800">Owned</p>
               }
 
               if (!SENDABLE_CARD_IDS.has(cardId)) {
