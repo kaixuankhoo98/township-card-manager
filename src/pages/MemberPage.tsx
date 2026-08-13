@@ -13,7 +13,7 @@ const SENDABLE_CARD_IDS = new Set(
 )
 
 // Only worth listing missing cards individually once the pile gets small enough to scan.
-const CARD_VIEW_THRESHOLD = 15
+const CARD_VIEW_THRESHOLD = 30
 
 export function MemberPage() {
   const { name = '' } = useParams<{ name: string }>()
