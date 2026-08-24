@@ -27,6 +27,8 @@ export function MemberPage() {
   const resetCollection = useResetCollection()
   const [feedback, setFeedback] = useState<{ message: string; isError: boolean } | null>(null)
   const [confirmingReset, setConfirmingReset] = useState(false)
+  const [copied, setCopied] = useState(false)
+  const [copyError, setCopyError] = useState(false)
 
   if (!auth) return null
 
@@ -51,7 +53,7 @@ export function MemberPage() {
     : []
 
   const missingByCategory =
-    missingCards.length > 0 && missingCards.length < CARD_VIEW_THRESHOLD
+    missingCards.length > 0
       ? CATALOG.categories
           .map((category) => ({
             category,
@@ -68,6 +70,40 @@ export function MemberPage() {
       setConfirmingReset(false)
     } catch {
       // resetCollection.isError is rendered below
+    }
+  }
+
+  function copyToClipboard(text: string) {
+    if (navigator.clipboard?.writeText) {
+      return navigator.clipboard.writeText(text)
+    }
+    const textarea = document.createElement('textarea')
+    textarea.value = text
+    textarea.style.position = 'fixed'
+    textarea.style.opacity = '0'
+    document.body.appendChild(textarea)
+    textarea.focus()
+    textarea.select()
+    const ok = document.execCommand('copy')
+    document.body.removeChild(textarea)
+    return ok ? Promise.resolve() : Promise.reject(new Error('execCommand copy failed'))
+  }
+
+  async function handleCopyMissing() {
+    const text = [
+      `Cards required for ${memberName}:`,
+      '',
+      ...missingByCategory.map(
+        ({ category, cards }) => `${category.name}: ${cards.map((card) => card.name).join(', ')}`,
+      ),
+    ].join('\n')
+    try {
+      await copyToClipboard(text)
+      setCopyError(false)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      setCopyError(true)
     }
   }
 
@@ -143,20 +179,34 @@ export function MemberPage() {
         </p>
       )}
 
-      {missingByCategory.length > 0 && (
-        <section className="space-y-2 rounded border border-neutral-300 dark:border-neutral-700 p-3">
-          <h2 className="text-sm font-semibold">Still needed ({missingCards.length})</h2>
-          <div className="space-y-1">
-            {missingByCategory.map(({ category, cards }) => (
-              <p key={category.id} className="text-sm">
-                <span className="font-medium">{category.name}:</span>{' '}
-                <span className="text-neutral-600 dark:text-neutral-400">
-                  {cards.map((card) => card.name).join(', ')}
-                </span>
-              </p>
-            ))}
+      {missingCards.length > 0 && (
+        <details
+          open={missingCards.length < CARD_VIEW_THRESHOLD}
+          className="rounded-lg border-2 border-dashed border-neutral-400 dark:border-neutral-600 p-3"
+        >
+          <summary className="text-sm font-semibold cursor-pointer select-none">
+            Still needed ({missingCards.length})
+          </summary>
+          <div className="space-y-2 mt-3">
+            <button
+              type="button"
+              onClick={handleCopyMissing}
+              className="text-xs rounded bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 px-2 py-1 font-medium"
+            >
+              {copied ? 'Copied!' : copyError ? 'Copy failed — try again' : 'Copy for WhatsApp'}
+            </button>
+            <div className="space-y-1">
+              {missingByCategory.map(({ category, cards }) => (
+                <p key={category.id} className="text-sm">
+                  <span className="font-medium">{category.name}:</span>{' '}
+                  <span className="text-neutral-600 dark:text-neutral-400">
+                    {cards.map((card) => card.name).join(', ')}
+                  </span>
+                </p>
+              ))}
+            </div>
           </div>
-        </section>
+        </details>
       )}
 
       {ownership &&
