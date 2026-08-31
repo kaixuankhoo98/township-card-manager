@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { supabase } from '../lib/supabaseClient'
+import { fetchAllRows } from '../lib/fetchAllRows'
 import { useAuth } from '../context/AuthContext'
 import { ALL_CARDS } from '../lib/catalog'
 
@@ -18,15 +19,15 @@ const CARD_IDS = ALL_CARDS.map((c) => c.id)
 export function useSendLogQuery() {
   return useQuery({
     queryKey: ['send_log'],
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from('send_log')
-        .select('id, sender_name, recipient_name, card_id, sent_at, undone, undone_at')
-        .in('card_id', CARD_IDS)
-        .order('sent_at', { ascending: false })
-      if (error) throw error
-      return data as SendLogRow[]
-    },
+    queryFn: async () =>
+      fetchAllRows<SendLogRow>((from, to) =>
+        supabase
+          .from('send_log')
+          .select('id, sender_name, recipient_name, card_id, sent_at, undone, undone_at')
+          .in('card_id', CARD_IDS)
+          .order('sent_at', { ascending: false })
+          .range(from, to),
+      ),
   })
 }
 

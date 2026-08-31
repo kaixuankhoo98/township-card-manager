@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { supabase } from '../lib/supabaseClient'
+import { fetchAllRows } from '../lib/fetchAllRows'
 import { useAuth } from '../context/AuthContext'
 import { ALL_CARDS } from '../lib/catalog'
 
@@ -14,14 +15,14 @@ const CARD_IDS = ALL_CARDS.map((c) => c.id)
 export function useOwnershipQuery() {
   return useQuery({
     queryKey: ['ownership'],
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from('ownership')
-        .select('member_name, card_id, owned')
-        .in('card_id', CARD_IDS)
-      if (error) throw error
-      return data as OwnershipRow[]
-    },
+    queryFn: async () =>
+      fetchAllRows<OwnershipRow>((from, to) =>
+        supabase
+          .from('ownership')
+          .select('member_name, card_id, owned')
+          .in('card_id', CARD_IDS)
+          .range(from, to),
+      ),
   })
 }
 
