@@ -1,13 +1,15 @@
 import catalog2026_07 from '../data/catalog/2026-07.json'
+import catalog2026_09 from '../data/catalog/2026-09.json'
 import rosterJson from '../data/roster.json'
 import type { CatalogFile, Rarity } from '../types/catalog'
 import { cardId, categoryId } from './slugify'
 
 // Update this pointer whenever a new month's catalog file is added.
-export const CURRENT_CATALOG_VERSION = '2026-07'
+export const CURRENT_CATALOG_VERSION = '2026-09'
 
 const CATALOG_FILES: Record<string, CatalogFile> = {
   '2026-07': catalog2026_07 as CatalogFile,
+  '2026-09': catalog2026_09 as CatalogFile,
 }
 
 export interface Card {

@@ -1,0 +1,231 @@
+{
+  "version": "2026-09",
+  "label": "Harvest Collection (Acorn)",
+  "categories": [
+    {
+      "name": "Autumn City",
+      "cards": [
+        { "name": "Paper Cup", "rarity": "one_star" },
+        { "name": "Newsstand", "rarity": "one_star" },
+        { "name": "Bike Rack", "rarity": "one_star" },
+        { "name": "Balcony", "rarity": "one_star" },
+        { "name": "Road Barrier", "rarity": "one_star" },
+        { "name": "Tram", "rarity": "one_star" },
+        { "name": "Streetlamp", "rarity": "one_star" },
+        { "name": "Clock Tower", "rarity": "one_star" },
+        { "name": "Bridge", "rarity": "one_star" },
+        { "name": "Paper Boat", "rarity": "two_star" }
+      ]
+    },
+    {
+      "name": "Comfort",
+      "cards": [
+        { "name": "Firewood", "rarity": "one_star" },
+        { "name": "Slippers", "rarity": "one_star" },
+        { "name": "Knitted Throw", "rarity": "one_star" },
+        { "name": "Rocking Chair", "rarity": "one_star" },
+        { "name": "Spiced Tea", "rarity": "one_star" },
+        { "name": "Sofa", "rarity": "one_star" },
+        { "name": "Stovetop Kettle", "rarity": "two_star" },
+        { "name": "Robe", "rarity": "two_star" },
+        { "name": "Lamp", "rarity": "two_star" },
+        { "name": "Candle", "rarity": "two_star" }
+      ]
+    },
+    {
+      "name": "Forest",
+      "cards": [
+        { "name": "Acorn", "rarity": "one_star" },
+        { "name": "Forest Trail", "rarity": "one_star" },
+        { "name": "Maple Leaf", "rarity": "one_star" },
+        { "name": "Pinecones", "rarity": "one_star" },
+        { "name": "Toadstool", "rarity": "one_star" },
+        { "name": "Fallen Log", "rarity": "one_star" },
+        { "name": "Forest Brook", "rarity": "one_star" },
+        { "name": "Flying Geese", "rarity": "two_star" },
+        { "name": "Boulder", "rarity": "two_star" },
+        { "name": "Rowan Berries", "rarity": "three_star" }
+      ]
+    },
+    {
+      "name": "School Life",
+      "cards": [
+        { "name": "Chalkboard", "rarity": "one_star" },
+        { "name": "Bookcase", "rarity": "one_star" },
+        { "name": "Backpack", "rarity": "one_star" },
+        { "name": "Ball", "rarity": "one_star" },
+        { "name": "Test Tubes", "rarity": "one_star" },
+        { "name": "Globe", "rarity": "two_star" },
+        { "name": "Desk", "rarity": "two_star" },
+        { "name": "Campus", "rarity": "two_star" },
+        { "name": "Mug", "rarity": "two_star" },
+        { "name": "Stationery", "rarity": "three_star" }
+      ]
+    },
+    {
+      "name": "Scary Tales",
+      "cards": [
+        { "name": "Toy Spider", "rarity": "one_star" },
+        { "name": "Crow", "rarity": "one_star" },
+        { "name": "Ghost", "rarity": "one_star" },
+        { "name": "Scarecrow", "rarity": "one_star" },
+        { "name": "Old Tree", "rarity": "two_star" },
+        { "name": "Haunted House", "rarity": "two_star" },
+        { "name": "Cauldron", "rarity": "two_star" },
+        { "name": "Dungeon", "rarity": "three_star" },
+        { "name": "Pumpkin", "rarity": "three_star" },
+        { "name": "Gate", "rarity": "four_star" }
+      ]
+    },
+    {
+      "name": "Rainy Day",
+      "cards": [
+        { "name": "Thunderstorm", "rarity": "one_star" },
+        { "name": "Scarf", "rarity": "one_star" },
+        { "name": "Thermometer", "rarity": "two_star" },
+        { "name": "Wind Vane", "rarity": "two_star" },
+        { "name": "Umbrella", "rarity": "two_star" },
+        { "name": "Rain Hat", "rarity": "two_star" },
+        { "name": "Dew", "rarity": "three_star" },
+        { "name": "Drying Rack", "rarity": "three_star" },
+        { "name": "Puddle", "rarity": "three_star" },
+        { "name": "Rainbow", "rarity": "four_star" }
+      ]
+    },
+    {
+      "name": "Harvest",
+      "cards": [
+        { "name": "Apple Bucket", "rarity": "one_star" },
+        { "name": "Sheaf", "rarity": "two_star" },
+        { "name": "Barn", "rarity": "two_star" },
+        { "name": "Pitchfork", "rarity": "two_star" },
+        { "name": "Corn", "rarity": "two_star" },
+        { "name": "Carrots", "rarity": "three_star" },
+        { "name": "Pumpkin Cart", "rarity": "three_star" },
+        { "name": "Cabbage", "rarity": "three_star" },
+        { "name": "Berries", "rarity": "three_star" },
+        { "name": "Harvester", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Bedtime",
+      "cards": [
+        { "name": "Bed", "rarity": "two_star" },
+        { "name": "Sleep Mask", "rarity": "two_star" },
+        { "name": "Teddy Bear", "rarity": "two_star" },
+        { "name": "Clock", "rarity": "two_star" },
+        { "name": "Storybook", "rarity": "two_star" },
+        { "name": "Owl", "rarity": "three_star" },
+        { "name": "Dreamcatcher", "rarity": "three_star" },
+        { "name": "Moon", "rarity": "three_star" },
+        { "name": "Humidifier", "rarity": "four_star" },
+        { "name": "Sleeping Man", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Costumes",
+      "cards": [
+        { "name": "Fangs", "rarity": "two_star" },
+        { "name": "Horns", "rarity": "two_star" },
+        { "name": "Vampire Costume", "rarity": "two_star" },
+        { "name": "Face Paints", "rarity": "three_star" },
+        { "name": "Jester Hat", "rarity": "three_star" },
+        { "name": "Cloak", "rarity": "three_star" },
+        { "name": "Ring", "rarity": "four_star" },
+        { "name": "Wizard Hat", "rarity": "four_star" },
+        { "name": "Mummy", "rarity": "gold" },
+        { "name": "Makeup Artist", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Pastimes",
+      "cards": [
+        { "name": "Painting", "rarity": "two_star" },
+        { "name": "Teepee", "rarity": "two_star" },
+        { "name": "Block Tower", "rarity": "two_star" },
+        { "name": "Gramophone", "rarity": "three_star" },
+        { "name": "Pressed Flower", "rarity": "three_star" },
+        { "name": "Pottery", "rarity": "three_star" },
+        { "name": "Yarn Ball", "rarity": "four_star" },
+        { "name": "Puzzle", "rarity": "four_star" },
+        { "name": "Knitting", "rarity": "gold" },
+        { "name": "Park Stroll", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Diwali",
+      "cards": [
+        { "name": "Oil Lamp", "rarity": "two_star" },
+        { "name": "Elephant", "rarity": "two_star" },
+        { "name": "Rangoli", "rarity": "three_star" },
+        { "name": "Incense Sticks", "rarity": "three_star" },
+        { "name": "Lights", "rarity": "three_star" },
+        { "name": "Laddu", "rarity": "four_star" },
+        { "name": "Paper Lantern", "rarity": "four_star" },
+        { "name": "Sweets", "rarity": "four_star" },
+        { "name": "Decorating", "rarity": "gold" },
+        { "name": "Fireworks", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Sweets",
+      "cards": [
+        { "name": "Candy", "rarity": "two_star" },
+        { "name": "Candy Bowl", "rarity": "three_star" },
+        { "name": "Lollipop", "rarity": "three_star" },
+        { "name": "Bat Cookies", "rarity": "four_star" },
+        { "name": "Caramel Apple", "rarity": "four_star" },
+        { "name": "Gummy Worms", "rarity": "four_star" },
+        { "name": "Vampire Cookie", "rarity": "four_star" },
+        { "name": "Cupcake", "rarity": "four_star" },
+        { "name": "Trick or Treat", "rarity": "gold" },
+        { "name": "Baking", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Fall Feast",
+      "cards": [
+        { "name": "Gravy Boat", "rarity": "three_star" },
+        { "name": "Leaf Bouquet", "rarity": "three_star" },
+        { "name": "Cornucopia", "rarity": "four_star" },
+        { "name": "Pilgrim Hat", "rarity": "four_star" },
+        { "name": "Pie", "rarity": "four_star" },
+        { "name": "Goblet", "rarity": "four_star" },
+        { "name": "Table Setting", "rarity": "four_star" },
+        { "name": "Wreath", "rarity": "gold" },
+        { "name": "Turkey", "rarity": "gold" },
+        { "name": "Parade", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Sale Day",
+      "cards": [
+        { "name": "Gift Box", "rarity": "three_star" },
+        { "name": "Balloon Arch", "rarity": "four_star" },
+        { "name": "Wallet", "rarity": "four_star" },
+        { "name": "Raffle Machine", "rarity": "four_star" },
+        { "name": "Sale Sign", "rarity": "four_star" },
+        { "name": "On Sale", "rarity": "four_star" },
+        { "name": "Shopping Basket", "rarity": "four_star" },
+        { "name": "Sale", "rarity": "gold" },
+        { "name": "Online Deals", "rarity": "gold" },
+        { "name": "Shopping", "rarity": "gold" }
+      ]
+    },
+    {
+      "name": "Grape Fair",
+      "cards": [
+        { "name": "Grapes", "rarity": "four_star" },
+        { "name": "Straw Hat", "rarity": "four_star" },
+        { "name": "Drum", "rarity": "three_star" },
+        { "name": "Cheese Plate", "rarity": "four_star" },
+        { "name": "Grape Press", "rarity": "four_star" },
+        { "name": "Windmill", "rarity": "four_star" },
+        { "name": "Grape Picking", "rarity": "five_star" },
+        { "name": "Drumbeat", "rarity": "gold" },
+        { "name": "Carousel", "rarity": "gold" },
+        { "name": "Dance", "rarity": "gold" }
+      ]
+    }
+  ]
+}
