@@ -217,11 +217,11 @@
       "cards": [
         { "name": "Grapes", "rarity": "four_star" },
         { "name": "Straw Hat", "rarity": "four_star" },
-        { "name": "Drum", "rarity": "three_star" },
-        { "name": "Cheese Plate", "rarity": "four_star" },
-        { "name": "Grape Press", "rarity": "four_star" },
-        { "name": "Windmill", "rarity": "four_star" },
-        { "name": "Grape Picking", "rarity": "five_star" },
+        { "name": "Drum", "rarity": "four_star" },
+        { "name": "Cheese Plate", "rarity": "five_star" },
+        { "name": "Grape Press", "rarity": "five_star" },
+        { "name": "Windmill", "rarity": "five_star" },
+        { "name": "Grape Picking", "rarity": "gold" },
         { "name": "Drumbeat", "rarity": "gold" },
         { "name": "Carousel", "rarity": "gold" },
         { "name": "Dance", "rarity": "gold" }
